@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script type="text/javascript" src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script type="module" src="js/search.js"></script>
+  <link rel="stylesheet" href="./css/search.css">
+  <title>PlacesToStay</title>
+</head>
+
+<body>
+  <div id="greenalert" classs="container p-5">
+    <div class="row no-gutters fixed-top">
+      <div class="col-lg-2 col-md-1 ml-auto ">
+        <div id="greenalert_container" class="alert alert-success fade show" role="alert">
+          <button id="greenbtn" type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="True">&times;</span>
+          </button>
+          <h6 class="alert-heading">Success!</h6>
+          <p id="pgreen">This is an alert within a column. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="redalert" classs="container p-5">
+    <div class="row no-gutters fixed-top">
+      <div class="col-lg-2 col-md-1 ml-auto ">
+        <div id="redalert_container" class="alert alert-danger fade show" role="alert">
+          <button id="redbtn" type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="True">&times;</span>
+          </button>
+          <h6 class="alert-heading">Warning!</h6>
+          <p id="pred">This is an alert within a column. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modallll" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div id="bcc" class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Please insert details for the booking!</h5>
+          <button id="modalclose" type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div id="modalbody" class="modal-body">
+
+          <select id="tablepeople" class="form-select form-select-lg mb-3" aria-label="Default select example">
+            <option selected>People</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+          </select><br>
+          <select id="tabledate" class="form-select" aria-label="Default select example">
+            <option selected>Date</option>
+            <option value="220601">01/06/22</option>
+            <option value="220602">02/06/22</option>
+            <option value="220603">03/06/22</option>
+          </select>
+        </div>
+        <div id="modalfooter" class="modal-footer">
+          <button id="modalbook" type="button" class="btn btn-info">Book</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+  
+  <a id="a" href="./login.html"><button id="lbtn">Login</button> </a>
+  <div class="container h-100">
+    <h1 id="title" class="text-center"> Search for Accommodations </h1>
+    <div class="d-flex justify-content-center h-100">
+
+      <div class="searchbar">
+
+        <input class="search_input" type="text" id="location" placeholder="Location :" />
+        <a href="#" id="ajaxButton" class="search_icon"><i class="fas fa-search"></i></a>
+      </div>
+    </div>
+  </div>
+  <table id="maptable">
+    <tr>
+      <th class="thbtn"><button id="mapbtn" class="maptablebtn">Map</button> || </th>
+      <th class="thbtn"><button id="tablebtn" class="maptablebtn">Table</button></th>
+    </tr>
+  </table>
+  <br />
+  <p id="resultfor" class="text-left font-weight-bold h4"> </p>
+  <div id="mapdiv">
+    <div id="leafletmap"> </div>
+  </div>
+
+  <div id="table1">
+    <table id="results" class="table table-striped table-dark"><thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Type</th>
+          <th scope="col">Location</th>
+          <th scope="col">Longitude</th>
+          <th scope="col">Latitude</th>
+          <th scope="col">Description</th>
+        </tr>
+      </thead></table>
+  </div>
+</body>
+
+</html>
+

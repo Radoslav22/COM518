@@ -1,0 +1,39 @@
+body,html{
+    background-image: url(../images/background2.jpg);
+    background-repeat: no-repeat;
+    background-size: 1600px 800px;
+    font-family: "Roboto", sans-serif;
+}
+h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    
+}
+#container{
+    background-color: rgb(73, 80, 87, 0.6);
+    color: white;
+}
+#loginbtn{
+    background-color: #005F73;
+    border-color: #005F73;
+    font-weight: bold;
+}
+h6{
+  font-family: 'Montserrat',sans-serif;
+    font-weight: bold;
+}
+p{
+  font-size: small;
+}
+#greenalert_container{
+  background-color: rgba(69, 255, 153, 0.8);
+  color: black;
+}
+#redalert_container{
+  background-color: rgb(227, 23, 23, 0.8);
+  color: black;
+  border: none;
+}
+#greenalert, #redalert{
+  display: none;
+}

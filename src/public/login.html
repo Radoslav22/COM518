@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script type="text/javascript" src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+	<script type="module" src="js/login.js"></script>
+	<link rel="stylesheet" href="./css/login.css">
+	<title>PlacesToStay</title>
+</head>
+<body>
+	<div id="greenalert" classs="container p-5">
+		<div class="row no-gutters fixed-top">
+		  <div class="col-lg-2 col-md-1  ml-auto ">
+			<div id="greenalert_container" class="alert alert-success fade show" role="alert">
+			  <button id="greenbtn" type="button" class="close" data-dismiss="alert" aria-label="Close">
+				  <span aria-hidden="True">&times;</span>
+				</button>
+			   <h6 class="alert-heading">Success!</h6>
+				<p id="pgreen">This is an alert within a column. </p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	
+	  <div id="redalert" classs="container p-5">
+		<div class="row no-gutters fixed-top">
+		  <div class="col-lg-2 col-md-1 ml-auto ">
+			<div id="redalert_container" class="alert alert-danger fade show" role="alert">
+			  <button id="redbtn" type="button" class="close" data-dismiss="alert" aria-label="Close">
+				  <span aria-hidden="True">&times;</span>
+				</button>
+			   <h6 class="alert-heading">Warning!</h6>
+				<p id="pred">This is an alert within a column. </p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	<section class="vh-100" >
+		<div  class="container py-5 h-100">
+		  <div  class="row d-flex justify-content-center align-items-center h-100">
+			<div class="col-12 col-md-8 col-lg-6 col-xl-5">
+			  <div id="container" class="card shadow-2-strong" style="border-radius: 1rem;">
+				<div class="card-body p-5 text-center">
+	  
+				  <h3 class="mb-5">Sign in</h3>
+	  
+				  <div id="logindiv" class="form-outline mb-4">
+					<input type="text" id="username" class="form-control form-control-lg" />
+					<label class="form-label" for="username">Username</label>
+				  
+					<input type="password" id="password" class="form-control form-control-lg" />
+					<label class="form-label" for="password">Password</label>
+				  </div>
+	  
+				  
+				  <div class="form-check d-flex justify-content-start mb-4">
+					<input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+					<label class="form-check-label" for="form1Example3"> Remember password </label>
+				  </div>
+	  
+				  <button id="loginbtn" class="btn btn-primary btn-medium btn-block" type="submit">Login</button>
+	  
+				  <hr class="my-4">
+	  
+				  <div>
+					<p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Sign Up</a>
+					</p>
+				  </div>
+	  
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </section>
+	  
+</body>
+
+</html>

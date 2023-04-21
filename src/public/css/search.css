@@ -1,0 +1,202 @@
+body,
+    html {
+      font-family: 'Roboto', sans-serif;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      background: #353b48;
+      background-image: url("../images/background2.jpg");
+      background-repeat: no-repeat;
+      background-size: 1600px 750px;
+      
+    }
+
+    .searchbar {
+      margin-bottom: auto;
+      margin-top: auto;
+      height: 60px;
+      background-color: #353b48;
+      border-radius: 30px;
+      padding: 10px;
+    }
+
+    .search_input {
+      color: white;
+      border: 0;
+      outline: 0;
+      background: none;
+      width: 0;
+      caret-color: transparent;
+      line-height: 40px;
+      transition: width 0.4s linear;
+    }
+
+    .searchbar:hover>.search_input {
+      padding: 0 10px;
+      width: 450px;
+      caret-color: red;
+      transition: width 0.4s linear;
+    }
+
+    .searchbar:hover>.search_icon {
+      background: white;
+      color: #e74c3c;
+    }
+
+    .search_icon {
+      height: 40px;
+      width: 40px;
+      float: right;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+    }
+
+    #title {
+      color: white;
+      background-color: rgb(73, 80, 87, 0.6);
+      ;
+      border-radius: 10px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      margin: 0;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #maptable {
+      position: absolute;
+      bottom: 10%;
+      right: 5%;
+      transform: translate(30%, 150%);
+      font-size: larger;
+    }
+    
+    #lbtn {
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      transform: translate(40%, -60%);
+      border: #e74c3c;
+      border-radius: 10px;
+      color: black;
+      background-color: white;
+      transition: all 0.5s;
+      font-size: larger;
+    }
+
+    #lbtn:hover {
+      background: #353b48;
+      color: white;
+      cursor: pointer;
+      transition: all 0.5s;
+      border-radius: 30px;
+    }
+
+    .maptablebtn {
+      border: #e74c3c;
+      color: black;
+      background-color: white;
+      transition: all 0.5s;
+      border-radius: 10px;
+
+    }
+
+    .maptablebtn:hover {
+      background: #353b48;
+      color: white;
+      cursor: pointer;
+      transition: all 0.5s;
+      border-radius: 30px;
+    }
+
+    #table1 {
+      display: none;
+    }
+
+    #mapdiv {
+      display: none;
+      justify-content: center;
+      
+    }
+    #leafletmap{
+      margin-left: 10%;
+      margin-right: 10%;
+      border-radius: 15px;
+      width:80%; 
+      height:700px;
+      
+    }
+
+    #resultfor {
+      color: white;
+      background-color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      bottom: 2%;
+      left: 1%;
+      border-radius: 5px;
+      width: fit-content;
+    }
+
+    #a {
+      color: black;
+      text-decoration: none;
+      box-shadow: inset 0 -3px 0 0 white;
+    }
+
+    h6 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: small;
+    }
+
+    #greenalert_container {
+      background-color: #7dd181;
+      border: none;
+      color: white;
+    }
+
+    #redalert_container {
+      background-color: #d6371f;
+      color: white;
+      border: none;
+    }
+
+    #greenalert,
+    #redalert {
+      display: none;
+    }
+
+    .leaflet-popup-content {
+      text-align: center;
+      align-content: center;
+    }
+
+    #modallll {
+      background-color: rgb(73, 80, 87, 0.4);
+      display: none;
+      text-align: center;
+      align-content: center;
+    }
+
+    #bcc {
+      background-color: rgb(73, 80, 87, 0.8);
+      color: white;
+    }
+
+    #tablepeople,
+    #tabledate {
+      padding: 5px 100px;
+    }
+    #booked{
+      font-size:medium;
+    }
